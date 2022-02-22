@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --Very-dark-blue: hsl(217, 54%, 11%);  /*MAIN bg*/
+    --Very-dark-blu: hsl(216, 50%, 16%); /*card bg*/
+    --Very-dark-ble: hsl(215, 32%, 27%);/*line*/
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+*{
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--Very-dark-blue);
+}
+.card{
+    width: 350px;
+    height: auto;
+    background: var(--Very-dark-blu);
+    border-radius: 1rem;
+}
+.card_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    text-align: left;
+}
+.card-img{
+    background: url("images/image-equilibrium.jpg");
+    width: 300px;
+    height: 300px;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+
+}
+.card-img:hover::after{
+    content: url("images/icon-view.svg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .5;
+    background: var(--Cyan);
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+.text-box{
+    width: 80%;
+}
+.text-box h3{
+    color: var(--White);
+    margin: 1rem 0;
+    cursor: pointer; 
+}
+.text-box h3:hover{
+    color: var(--Cyan);
+}
+.card_container p{
+    color: var(--Very-dark-ble);
+    margin: 1rem 0;
+    font-weight: 700;
+}
+.spans{
+    border-bottom: outset;
+    border-width: 2px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.spans span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spans span:nth-child(1){
+    color: var(--Cyan);
+}
+.spans span:nth-child(2){
+    color: var(--Very-dark-ble);
+    font-weight: 700;
+}
+.spans span img{
+    padding-right: 10px;  
+}
+.creator{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 1rem 0;
+}
+.creator img{
+    width: 50px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+.creator p{
+    margin-left: 1rem;
+    font-weight: 700;
+}
+strong{
+    color: var(--White);
+    cursor: pointer;
+}
+strong:hover{
+    color: var(--Cyan);
+}
